@@ -23,7 +23,7 @@
 class FT_RAK811{
 	public:
         //Constructor
-        FT_RAK811(String dev_eui, String app_eui, String app_key, String method);
+        FT_RAK811(String dev_eui, String app_eui, String app_key, String method, String region);
 
         // Methods
         void turnLoRaON(void);
@@ -35,6 +35,7 @@ class FT_RAK811{
         String _app_eui;
         String _app_key;
         String _method;
+        String _region;
 
         // Methods
         void ShowDebug(void);
@@ -42,7 +43,11 @@ class FT_RAK811{
         void Sleep(void);
         void WakeUp(void);
         void SendJoinReq(void);
+        void SetDR(String dr);
+        void SetADR(String adr);
         void SetKeys(void);
+        void SetRegion(void);
+
         
 };
 
