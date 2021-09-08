@@ -6,24 +6,24 @@
 # Datatypes (KEYWORD1)
 #######################################
 
-FT_RAK811   	KEYWORD1
+FT_RAK811   	        KEYWORD1
 
 #######################################
 # Methods and Functions (KEYWORD2)
 #######################################
 
-begin		KEYWORD2
-turnLoRaON	KEYWORD2
-send		KEYWORD2
+begin		            KEYWORD2
+turnLoRaON	            KEYWORD2
+send		            KEYWORD2
 
 #######################################
 # Constants (LITERAL1)
 #######################################
 
-DEV_EUI		LITERAL1
-APP_EUI		LITERAL1
-APP_KEY		LITERAL1
-CON_MET		LITERAL1
-PORT		LITERAL1
-MESSAGE		LITERAL1
-REGION		LITERAL1
+DEV_EUI		            LITERAL1
+APP_EUI		            LITERAL1
+APP_KEY		            LITERAL1
+CON_MET		            LITERAL1
+POR_SEN		            LITERAL1
+MESSAGE		            LITERAL1
+REG_COD		            LITERAL1

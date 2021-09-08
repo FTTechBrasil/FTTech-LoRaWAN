@@ -38,14 +38,14 @@ void FT_RAK811::begin(void){
     SetKeys();
     SetRegion();
     SendJoinReq();
-    Serial.println("");
     Sleep();
     return;
 }
 
 void FT_RAK811::send(String port, String data){
     WakeUp();
-    SendCommand("at+send=0,"+ port +","+ data +"\r\n");
+    SendCommand("at+send=lora:"+ port +":"+ data +"\r\n");
+    delay(5000);
     ShowDebug();
     Sleep();
     return;
@@ -73,6 +73,7 @@ void FT_RAK811::SendCommand(String atComm){
 }
 
 void FT_RAK811::Sleep(void){
+    Serial.print("\n");
     SendCommand("at+set_config=device:sleep:1\r\n");
     ShowDebug();
     return;
@@ -94,8 +95,10 @@ void FT_RAK811::SendJoinReq(void){
         Serial.print("Invalid join method.");
         return;
     }
+    Serial.print("Setting join mode to "+ _method +":");
     SendCommand("at+set_config=lora:join_mode:" + (String)methodid + "\r\n");
     ShowDebug();
+    Serial.print("Sending join requisition to gateway:");
     SendCommand("at+join\r\n");
     delay(5000);
     ShowDebug();
