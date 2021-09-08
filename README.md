@@ -9,7 +9,7 @@ Arduino IDE Library to make our SAMD51 interface with RAK811 20 pin click easier
 - [FTTech SAMD51 Clicks](https://github.com/FTTechBrasil/FTTech_SAMD51_Clicks)
 
 ## Updates
-* 0.1.0 Initial Release
+* 0.2.0 Initial Release with an example
 
 ## License
 - The MIT License (MIT)
